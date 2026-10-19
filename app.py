@@ -15,5 +15,5 @@ bathrooms = st.selectbox("Bathrooms", [1, 2, 3, 4])
 
 if st.button("Predict Price"):
     features = np.array([[sqft, bedrooms, bathrooms]])
-    price_in_inr = prediction[0] * 83  
+    price_in_inr = prediction[0]
     st.success(f"Estimated House Price: ₹{price_in_inr:,.2f}")
