@@ -16,4 +16,4 @@ bathrooms = st.selectbox("Bathrooms", [1, 2, 3, 4])
 if st.button("Predict Price"):
     features = np.array([[sqft, bedrooms, bathrooms]])
     prediction = model.predict(features)[0]
-    st.success(f"Estimated Price: ${prediction:,.2f}")
+    st.success(f"Estimated House Price: ${prediction[0]:,.2f}")
